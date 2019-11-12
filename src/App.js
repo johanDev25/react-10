@@ -16,10 +16,10 @@ export class App extends Component {
         <Link to="page2">Page2</Link>      
         </nav>
         <Switch>
-        <Route path="/" exact strict component={Page1} />
-        <Route path="/page1" exact strict component={Page1} />
-        <Route path="/page2" exact strict component={Page2} />
-        <Route path="/*" exact strict component={NotFound}/>
+        <Route path="/" exact component={Page1} />
+        <Route path="/page1" component={Page1} />
+        <Route path="/page2" component={Page2} />
+        <Route component={NotFound}/>
         </Switch>
       </div>
       </Router>
