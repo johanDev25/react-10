@@ -9,7 +9,6 @@ import {
 export class App extends Component {
   render() {
     return (
-      <Router>
          <div>
         <nav>
         <Link to="page1">Page1</Link>
@@ -22,7 +21,6 @@ export class App extends Component {
         <Route component={NotFound}/>
         </Switch>
       </div>
-      </Router>
     )
   }
 }
