@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import {
+  BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
   Link
 } from 'react-router-dom';
 
 export class App extends Component {
   render() {
     return (
-      <div>
+      <Router>
+         <div>
         <nav>
-          {/*Aca deben ir los links de navegacion*/}
+        <Link to="page1">Page1</Link>
+        <Link to="page2">Page2</Link>      
         </nav>
-        {/* Aca tienes que agreager algo para que las rutas funcionen*/}
+        <Switch>
+        <Route path="/" exact strict component={Page1} />
+        <Route path="/page1" exact strict component={Page1} />
+        <Route path="/page2" exact strict component={Page2} />
+        <Route path="/*" exact strict component={NotFound}/>
+        </Switch>
       </div>
+      </Router>
     )
   }
 }
